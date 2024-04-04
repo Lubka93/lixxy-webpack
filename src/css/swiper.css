@@ -1,0 +1,667 @@
+@media only screen and (min-width: 360px) {
+
+  #slider-1 {
+    width: 1000px;
+      height: 400px;
+      margin: 0 auto;
+      padding-top: 20px;
+      display: block;
+    
+    }
+    
+    #swiper01 {
+      width: inherit;
+      height: 400px;
+      position: relative;
+    
+    }
+    
+    #swiper-wrapper01 {
+      position: relative;
+      margin-bottom: 150px;
+      }
+    
+    
+    .img_upper_swiper {
+      width: inherit;
+      height: 500px;
+      object-fit: cover ;
+    }
+    
+    .slideBasicInfo #star_text {
+      font-size: 2.5vw;
+      margin-left: 10px;
+  
+  }
+    .slideBasicInfo  #star_icon {
+      margin: 0 auto;
+      margin-bottom: 10px;
+         width: fit-content;
+     }
+     .slideBasicInfo p {
+         font-size: 2.5vw;
+         margin-left: 10px;
+     
+     }
+    
+    #best_movies_section {
+    width: 300px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    height: 650px;
+    
+    }
+    
+    #swiper02 {
+    
+     width: inherit;
+     height: 600px;
+    padding-bottom: 60px;
+    
+    
+    }
+    
+    #swiper-wrapper02 {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+  
+      height: inherit;
+    }
+    
+    
+    
+    .swiper-slide02 {
+    object-fit: cover;
+    width:80px;
+    height: 130px;
+     
+    }
+    
+    #swiper02  .swiper-pagination-bullets
+    {
+      position: absolute;
+      background-color: black;
+      border-radius: 10px;
+      width: fit-content;
+    margin-left: 30% ;
+      border-color: rgba(220, 220, 47, 0.54);
+      border-style: solid;
+      border-width: 1px;
+      border-bottom: none;
+      border-right: none;
+      height: 35px;
+    }
+    
+    #swiper02 .swiper-pagination-bullet {
+      opacity: 1;
+      margin: 10px;
+      padding-bottom: 20px;
+      color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+    
+      
+    }
+    
+    #swiper02  .swiper-pagination-bullet-active {
+      opacity: 1;
+    background: none;
+      color: rgb(242, 255, 66); 
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+      
+    
+    }
+    
+    #swiper02  .swiper-pagination-bullet-active  p {
+      opacity: 1;
+      display: inline;
+    font-weight: 400;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    }
+    
+    #swiper02 .swiper-pagination-bullet p {
+      opacity: 1;
+      display: inline;
+      margin: 10px;
+      background-color: rgb(242, 255, 66); 
+      color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+     
+    }
+    #swiper-wrapper02 .swiper-slide h2 {color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    display: block;
+    position: relative;
+    align-items: center;
+    height: fit-content;
+    padding: 5px;
+    margin: 0;
+ }
+    
+    #swiper-wrapper02 .swiper-slide  p {
+      display: block;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: smaller;
+      position: relative;
+    opacity: 0.5;
+    padding: 5px;
+    margin: 0;
+    display: none;
+    }
+ }
+
+ #swiper-wrapper02 .swiper-slide h2 {
+  display: none;
+}
+
+@media only screen and (min-width: 390px) {
+
+  #slider-1 {
+    width: 820px;
+      height: 500px;
+      margin: 0 auto;
+      display: block;
+    
+    }
+    
+    #swiper01 {
+      width: inherit;
+      height: 500px;
+      position: relative;
+    
+    }
+    
+    #swiper-wrapper01 {
+      position: relative;
+      margin-bottom: 80px;
+      }
+    
+    
+    .img_upper_swiper {
+      width: 200px;
+      height: 300px;
+      object-fit: cover ;
+    }
+    .slideBasicInfo #star_text {
+      font-size: 2.5vw;
+      margin-left: 10px;
+  
+  }
+    .slideBasicInfo  #star_icon {
+      margin: 0 auto;
+      margin-bottom: 10px;
+         width: fit-content;
+     }
+     .slideBasicInfo p {
+         font-size: 2.5vw;
+         margin-left: 10px;
+     
+     }
+    
+    #best_movies_section {
+    width: 300px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    height: 650px;
+    
+    }
+    
+    #swiper02 {
+    
+     width: inherit;
+     height: 600px;
+    padding-bottom: 60px;
+    
+    
+    }
+    
+    #swiper-wrapper02 {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+  
+      height: inherit;
+    }
+    
+    
+    
+    .swiper-slide02 {
+    object-fit: cover;
+    width:80px;
+    height: 130px;
+     
+    }
+    
+    #swiper02  .swiper-pagination-bullets
+    {
+      position: absolute;
+      background-color: black;
+      border-radius: 10px;
+      width: fit-content;
+    margin-left: 30% ;
+      border-color: rgba(220, 220, 47, 0.54);
+      border-style: solid;
+      border-width: 1px;
+      border-bottom: none;
+      border-right: none;
+      height: 35px;
+    }
+    
+    #swiper02 .swiper-pagination-bullet {
+      opacity: 1;
+      margin: 10px;
+      padding-bottom: 20px;
+      color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+    
+      
+    }
+    
+    #swiper02  .swiper-pagination-bullet-active {
+      opacity: 1;
+    background: none;
+      color: rgb(242, 255, 66); 
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+      
+    
+    }
+    
+    #swiper02  .swiper-pagination-bullet-active  p {
+      opacity: 1;
+      display: inline;
+    font-weight: 400;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    }
+
+    #swiper02 .swiper-pagination-bullet p {
+      opacity: 1;
+      display: inline;
+      margin: 10px;
+      background-color: rgb(242, 255, 66); 
+      color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+     
+    }
+ }
+ #swiper-wrapper02 .swiper-slide h2 {
+  display: none;
+}
+
+#swiper-wrapper02 .swiper-slide p {
+  display: none;
+}
+
+
+ @media only screen and (min-width: 768px) {
+
+  #slider-1 {
+    width: 900px;
+      height: 500px;
+      margin: 0 auto;
+      display: block;
+    
+    }
+    
+    #swiper01 {
+      width: inherit;
+      height: 500px;
+      position: relative;
+    
+    }
+    
+    #swiper-wrapper01 {
+      position: relative;
+      margin-bottom: 150px;
+      }
+    
+    
+    .img_upper_swiper {
+      width: inherit;
+      height: 370px;
+      object-fit: cover ;
+    }
+    
+    .slideBasicInfo #star_text {
+      font-size: 2.5vw;
+      margin-left: 10px;
+  
+  }
+    .slideBasicInfo  #star_icon {
+      margin: 0 auto;
+      margin-bottom: 10px;
+         width: fit-content;
+     }
+     .slideBasicInfo p {
+         font-size: 2.5vw;
+         margin-left: 10px;
+     
+     }
+    
+    #best_movies_section {
+    width: 600px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    height: 1500px;
+    
+    }
+    
+    #swiper02 {
+    
+     width: inherit;
+     height: 1400px;
+    padding-bottom: 100px;
+    
+    
+    }
+    
+    #swiper-wrapper02 {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    
+      height: inherit;
+    }
+    
+    
+    
+    .swiper-slide02 {
+    object-fit: cover;
+    width:200px;
+    height: 350px;
+     
+    }
+    
+    #swiper02  .swiper-pagination-bullets
+    {
+      position: absolute;
+      background-color: black;
+      border-radius: 10px;
+      width: fit-content;
+    margin-left: 50% ;
+      border-color: rgba(220, 220, 47, 0.54);
+      border-style: solid;
+      border-width: 1px;
+      border-bottom: none;
+      border-right: none;
+    }
+    
+    #swiper02 .swiper-pagination-bullet {
+      opacity: 1;
+      margin: 10px;
+      padding-bottom: 20px;
+      color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+    
+      
+    }
+    
+    #swiper02  .swiper-pagination-bullet-active {
+      opacity: 1;
+    background: none;
+      color: rgb(242, 255, 66); 
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+      
+    
+    }
+    
+    #swiper02  .swiper-pagination-bullet-active  p {
+      opacity: 1;
+      display: inline;
+    font-weight: 400;
+    
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+      
+    
+    }
+    #swiper02 .swiper-pagination-bullet p {
+      opacity: 1;
+      display: inline;
+      margin: 10px;
+      background-color: rgb(242, 255, 66); 
+      color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+     
+    }
+
+
+    #swiper-wrapper02 .swiper-slide h2 {color: aliceblue;
+      font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    display: block;
+    position: relative;
+    align-items: center;
+  display: none;}
+    
+    #swiper-wrapper02 .swiper-slide  p {
+      display: inline;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: smaller;
+      position: relative;
+      display: none;
+    }
+ }
+
+ @media only screen and (min-width: 1000px) { 
+  #slider-1 {
+  max-width: 1800px;
+  width: 1300px;
+    height: 520px;
+    display: flex;
+    margin: 0 auto;
+  
+  }
+  
+  #swiper01 {
+    width: inherit;
+    height: inherit;
+    position: relative;
+  
+  }
+  
+  #swiper-wrapper01 {
+    position: relative;
+    margin-bottom: 150px;
+    width: 1200px;
+    
+ 
+    }
+  
+  
+  .img_upper_swiper {
+    height: 400px;
+    width: 300px;
+    margin: 15px;
+    object-fit: cover ;
+  }
+  
+  .slideBasicInfo #star_text {
+    font-size: 1.5vw;
+    margin-left: 10px;
+
+}
+  .slideBasicInfo  #star_icon {
+    margin: 0 auto;
+    margin-bottom: 10px;
+       width: fit-content;
+   }
+   .slideBasicInfo p {
+       font-size: 1.5vw;
+       margin-left: 10px;
+   
+   } 
+
+  #best_movies_section {
+  width:800px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  height: 2300px;
+  
+  }
+  
+  #swiper02 {
+  
+   width: inherit;
+   height: fit-content;
+  padding-bottom: 100px;
+  
+  
+  }
+  /*
+  #swiper-wrapper02 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    height: 2000px;
+  }*/
+  #swiper-wrapper02 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    height: 2000px; /* Set initial height */
+}
+
+
+  #swiper-wrapper02 .swiper-slide {
+width: 300px;
+
+background-color:  rgb(20, 19, 19);
+display: block;
+
+width: calc(25% - 20px); /* Adjust the width based on your design */
+   
+
+  }
+
+  #swiper-wrapper02 .swiper-slide img:hover {
+
+    height:358px ;
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier();
+  transition-delay: 0.1s;
+
+    
+      }
+    
+
+  #swiper-wrapper02 .swiper-slide h2 {color: aliceblue;
+  font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+font-weight: 100;
+display: block;
+position: relative;
+
+align-items: center;}
+
+#swiper-wrapper02 .swiper-slide h2 p {
+  display: inline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8rem;
+  position: relative;
+  opacity: 0.3;
+}
+
+
+#swiper-wrapper02 .swiper-slide  p {
+ display: block;
+}
+  .swiper-slide02 {
+  object-fit: cover;
+  width:230px;
+  height: 350px;
+  padding: 10px;
+   
+  }
+  
+  #swiper02  .swiper-pagination-bullets
+  {
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    width: fit-content;
+  margin-left: 50% ;
+    border-color: rgba(220, 220, 47, 0.54);
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  #swiper02 .swiper-pagination-bullet {
+    opacity: 1;
+    margin: 10px;
+    padding-bottom: 20px;
+    color: aliceblue;
+    font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+  
+  
+    
+  }
+  
+  #swiper02  .swiper-pagination-bullet-active {
+    opacity: 1;
+  background: none;
+    color: rgb(242, 255, 66); 
+    font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+  
+    
+  
+  }
+  
+  #swiper02  .swiper-pagination-bullet-active  p {
+    opacity: 1;
+    display: inline;
+  font-weight: 400;
+  
+    font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    
+  
+  }
+
+  #swiper02 .swiper-pagination-bullet p {
+    opacity: 1;
+    display: inline;
+    margin: 10px;
+    background-color: rgb(242, 255, 66); 
+    color: aliceblue;
+    font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
+    opacity: 0.2;
+   
+  }
+   }
+  
+
+   #slider-1 div.swiper-button-prev {
+  opacity: 0.3;
+  color: rgb(248, 255, 38);
+   }
+   #slider-1 div.swiper-button-prev:hover {
+    opacity: 1;
+    transition: 0.5s;
+   }
+
+
+  #slider-1 div.swiper-button-next {
+    opacity: 0.3;
+    color: rgb(248, 255, 38);
+  }
+
+  #slider-1 div.swiper-button-next:hover {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+

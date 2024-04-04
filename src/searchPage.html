@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8bcaf4bee0.js" crossorigin="anonymous" defer></script>  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+
+
+
+
+
+    <title>Lixxy</title>
+</head>
+<body>
+    <header>
+        <a id="logo_name" href="./index.html">LIXXY</a>
+       
+       <div id="main_category_container">
+        <a class="main_category_switch" group = "movieDetails.html" href="./main.html">Movies</a> 
+        <a class="main_category_switch" group = "TVshowsDetails.html"  href="./tvShows.html">TV series</a>
+       </div>
+       </header>
+     
+       <div class="container">
+
+   <div class="danger alert">
+          <div class="content">
+            <div class="icon">
+              <svg height="50" viewBox="0 0 512 512" width="50" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M449.07,399.08,278.64,82.58c-12.08-22.44-44.26-22.44-56.35,0L51.87,399.08A32,32,0,0,0,80,446.25H420.89A32,32,0,0,0,449.07,399.08Zm-198.6-1.83a20,20,0,1,1,20-20A20,20,0,0,1,250.47,397.25ZM272.19,196.1l-5.74,122a16,16,0,0,1-32,0l-5.74-121.95v0a21.73,21.73,0,0,1,21.5-22.69h.21a21.74,21.74,0,0,1,21.73,22.7Z"/></svg>
+          </div>
+            <p id="message-text"></p>
+          </div>
+          <button class="close">
+           <svg height="18px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#69727D" d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/></svg>
+          </button>
+        </div>
+        
+      </div>
+
+       <h1>Search for more</h1>
+    <section id="search_section_search_page">
+
+
+<div id="search_wrapper">
+  <form action="searchPage.html" class="search-form">
+    <div id="choose_radio">
+<p> <input  checked="checked"  type="radio" name="type" value="movie"> Movies</p>
+<p> <input   type="radio" name="type" value="tv"> TV shows</p>
+</div>
+<input type="text" name="search-term" id="input_for_search" placeholder="Search for  ... " maxlength="40" minlength="1">
+<button id="search_button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+
+</div>
+    </section>
+
+    <h1 id="search_reasult_heading"></h1>
+    <section id="best_movies_section">
+   
+ <!-- Slider main container -->
+ <div class="swiper" id="swiper02">
+  
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper" id="swiper-wrapper02">
+    <!-- Slides -->
+   
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination" id="swiper-pagination02"></div>
+
+  
+
+</div>
+
+      
+    </section>
+
+ <!-- spinner -->
+ <div id="loading" class="loading" >Loading&#8230;</div>
+
+
+    <section id="section_bottom">
+<p>Lixxy by Lubka</p>
+    </section>
+
+</body>
+</html>
