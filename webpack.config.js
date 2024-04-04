@@ -16,19 +16,19 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
           
-            {
-                test: /\.(png|jpg|gif)$/i,
-                use: [
-                  {
-                    loader: "url-loader",
-                    options: {
-                      limit: 8192,
-                      mimetype: "image/png",
-                      encoding: true,
-                    },
-                  },
-                ],
-              },
+             {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              mimetype: "image/png",
+              encoding: true,
+            },
+          },
+        ],
+      },
             
             
         ]

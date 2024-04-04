@@ -1420,7 +1420,7 @@ display: inline;
 
 
     body{
-        background-color: rgba(45, 45, 42, 0.16);
+        background-color: rgba(40, 36, 36, 0.989);
         display:block;
        padding: 0;
         margin: 0 auto;
@@ -1432,8 +1432,8 @@ display: inline;
     body::after {
        
         content: "";
-        background-color: rgba(45, 45, 42, 0.625);
-        background: url('../images/back.jpg');
+        background-color: rgba(45, 45, 42, 0.808);
+       /* background: url('src/css/images/back.jpg');*/
         background-repeat: repeat-y repeat-x ;
         opacity: 1;
         top: 0;

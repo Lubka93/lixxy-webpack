@@ -738,12 +738,14 @@ function init () {
             showPopularMovies ();
           //  search();
           //  backImg();
+          changeOfLinkColor ();
             break;
         case '/tvShows.html':
             showTopTvSeries();
             showPopularTvSeries ();
            // search();
            // backImg()
+           changeOfLinkColor ();
             
                     console.log('TV shows page');
                     

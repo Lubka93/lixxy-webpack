@@ -1,6 +1,7 @@
 // animation.js
 import anime from 'animejs';
 
+
 export function startAnimation() {
   anime ({
     targets: '#amazing path',
