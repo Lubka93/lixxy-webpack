@@ -1,4 +1,19 @@
-// netlify/functions/tmdb-proxy.js
+
+exports.handler = (event, context) => {
+
+  return {
+    statusCode: 200,
+    body: "hello world"
+  }
+}
+
+
+
+
+
+
+
+/* netlify/functions/tmdb-proxy.js
 
 const fetch = require('node-fetch');
 
@@ -32,3 +47,4 @@ exports.handler = async (event, context) => {
     };
   }
 };
+*/
