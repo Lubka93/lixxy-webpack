@@ -1,4 +1,4 @@
-[[redirects]]
+[build]
   from = "/*"
   to = "/.netlify/functions/myFunction"   
   status = 200

@@ -105,7 +105,7 @@
     "wildcard": "^2.0.1"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
     "dev": "webpack serve"
   },
   "author": "",

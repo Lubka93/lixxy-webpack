@@ -288,7 +288,7 @@ async function showTopTvSeries() {
     const {results} = await getLatestMovies('tv/top_rated');
     
     results.forEach((serie)=>{
-        let url = 'https://image.tmdb.org/t/p/original';
+    let url = 'https://image.tmdb.org/t/p/original';
     let swiperWrapper01 = document.querySelector('#swiper01 .swiper-wrapper');
 let div = document.createElement('div');
 div.classList.add('swiper-slide');
