@@ -100,7 +100,7 @@ function detailBackdropImg() {
     const movieDetailInfo = localStorage.getItem('selectedMovie');
     const movieDetailInfoObject = JSON.parse(movieDetailInfo);
 
-    let url = 'http://image.tmdb.org/t/p/original';
+    let url = 'https://image.tmdb.org/t/p/original';
     let backdropPath = movieDetailInfoObject.backdrop_path;
     let backdropPathUrl = `${url}${backdropPath}`;
     let body = document.querySelector('body');
@@ -144,7 +144,7 @@ function detailBackdropImgTvSeries() {
     const tvDetailInfo = localStorage.getItem('selectedTV');
     const tvDetailInfoObject = JSON.parse(tvDetailInfo);
 
-    const url = 'http://image.tmdb.org/t/p/original';
+    const url = 'https://image.tmdb.org/t/p/original';
     const backdropPath = tvDetailInfoObject.backdrop_path;
     const backdropPathUrl = `${url}${backdropPath}`;
     const body = document.querySelector('body');
@@ -198,7 +198,7 @@ async function showPopularMovies() {
     const swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
   
     finalResults.forEach((movie) => {
-      let url = 'http://image.tmdb.org/t/p/w500';
+      let url = 'https://image.tmdb.org/t/p/w500';
       let div = document.createElement('div');
       div.classList.add('swiper-slide');
       div.setAttribute('movie-id', `${movie.id}`);
@@ -228,7 +228,7 @@ async function showTopMovies() {
     showSpinner();
     const {results} = await getLatestMovies('movie/top_rated');
     results.forEach((movie)=>{
-        let url = 'http://image.tmdb.org/t/p/original';
+        let url = 'https://image.tmdb.org/t/p/original';
     let swiperWrapper01 = document.querySelector('#swiper01 .swiper-wrapper');
 let div = document.createElement('div');
 div.classList.add('swiper-slide');
@@ -262,7 +262,7 @@ const results04 = results002.results
     const completeResults = results.concat(results03);
     const finalReasults = completeResults.concat(results04);
     finalReasults.forEach((serie)=>{
-        let url = 'http://image.tmdb.org/t/p/w500';
+        let url = 'https://image.tmdb.org/t/p/w500';
     let swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
 let div = document.createElement('div');
 div.classList.add('swiper-slide');
@@ -287,7 +287,7 @@ async function showTopTvSeries() {
     const {results} = await getLatestMovies('tv/top_rated');
     
     results.forEach((serie)=>{
-        let url = 'http://image.tmdb.org/t/p/original';
+        let url = 'https://image.tmdb.org/t/p/original';
     let swiperWrapper01 = document.querySelector('#swiper01 .swiper-wrapper');
 let div = document.createElement('div');
 div.classList.add('swiper-slide');
@@ -380,7 +380,7 @@ function createDetailPage () {
 
 
     let movieDetailCard = document.querySelector('#detail_section');
-    let url = 'http://image.tmdb.org/t/p/original';
+    let url = 'https://image.tmdb.org/t/p/original';
 
     let div = document.createElement('div');
     div.setAttribute('id', 'picture_wrapper');
@@ -456,7 +456,7 @@ function createDetailPageTv () {
    
       let TvDetailCard = document.querySelector('#detail_section');
     
-      let url = 'http://image.tmdb.org/t/p/original';
+      let url = 'https://image.tmdb.org/t/p/original';
      
       let div = document.createElement('div');
       div.setAttribute('id', 'picture_wrapper');
@@ -526,7 +526,7 @@ function createDetailPageTv () {
 
 async function getLatestMovies (endpoint) {
 const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-const url =  'http://api.themoviedb.org/3/';
+const url =  'https://api.themoviedb.org/3/';
 const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US`);
  const data = await request.json();
 return data
@@ -534,7 +534,7 @@ return data
 
  async function getLatestMovies02 (endpoint) {
     const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-    const url =  'http://api.themoviedb.org/3/';
+    const url =  'https://api.themoviedb.org/3/';
     const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US&page=2`);
      const data = await request.json();
     return data
@@ -542,7 +542,7 @@ return data
 
      async function getLatestMovies03 (endpoint) {
         const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-        const url =  'http://api.themoviedb.org/3/';
+        const url =  'https://api.themoviedb.org/3/';
         const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US&page=3`);
          const data = await request.json();
         return data
@@ -557,7 +557,7 @@ const typeOfMedia = urlParams.get('type');
 const nameOfSearch = urlParams.get('search-term');
 
     const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-    const url =  'http://api.themoviedb.org/3/';
+    const url =  'https://api.themoviedb.org/3/';
 
 
     const totalPages = 5; // You can set the maximum number of pages you want to fetch
@@ -668,7 +668,7 @@ function displaySearchResults (results) {
     const swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
   
     finalResults.forEach((movie) => {
-      let url = 'http://image.tmdb.org/t/p/w500';
+      let url = 'https://image.tmdb.org/t/p/w500';
       let div = document.createElement('div');
       div.classList.add('swiper-slide');
       div.classList.add('card');
@@ -702,7 +702,7 @@ function displaySearchResultstv (results) {
     const swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
   
     finalResults.forEach((serie) => {
-      let url = 'http://image.tmdb.org/t/p/w500';
+      let url = 'https://image.tmdb.org/t/p/w500';
       let div = document.createElement('div');
       div.classList.add('swiper-slide');
       div.setAttribute('serie-id', `${serie.id}`);
