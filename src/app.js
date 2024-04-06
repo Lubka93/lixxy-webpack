@@ -8,17 +8,10 @@ import { initSwiper01, initSwiper02 } from './swiper.js';
 import { startAnimation } from './indexAnimation.js';
 import { response } from 'express';
 
-/*import backgroundImage from './css/images/back.jpg';
+const apiKey = process.env.APP_TMDB_API_KEY;
 
-const element = document.createElement('div');
-element.style.backgroundImage = `url(${backgroundImage})`;*/
+console.log("TMDB API Key:", apiKey);
 
-let api_button = document.querySelector('#api-fetch-poke');
-let responseText = document.querySelector('#response');
-api_button.addEventListener('click', async ()=>{
-    const response = await fetch('netlify/functions/pokedex').then(response => response.json());
-    responseText.innerHTML = JSON.stringify();
-})
 
 const page = { currPage: window.location.pathname }
 
