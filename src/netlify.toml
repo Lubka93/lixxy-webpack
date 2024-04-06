@@ -1,5 +1,5 @@
-[build]
+
+[[redirects]]
   from = "/*"
-  to = "/.netlify/functions/myFunction"   
+  to = "/index.html"
   status = 200
-  headers = {Access-Control-Allow-Origin = "*", Access-Control-Allow-Headers = "*"}
