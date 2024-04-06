@@ -7,6 +7,11 @@ import './css/swiper.css';
 import { initSwiper01, initSwiper02 } from './swiper.js';
 import { startAnimation } from './indexAnimation.js';
 
+
+const apiKey = process.env.API_KEY;
+
+// Use apiKey in your API requests
+
 /*import backgroundImage from './css/images/back.jpg';
 
 const element = document.createElement('div');
@@ -343,7 +348,7 @@ if (e.currentTarget.classList.contains('swiper-slide')) {
     e.preventDefault();
     showSpinner();
     const myDetailPage = 'TVshowsDetails.html';
-    const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
+    //const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
 if (e.currentTarget.classList.contains('swiper-slide')) { 
   const TvShowId = e.currentTarget.getAttribute('serie-id');
   console.log(TvShowId);
@@ -525,7 +530,7 @@ function createDetailPageTv () {
 //Fetch data TMDB API
 
 async function getLatestMovies (endpoint) {
-const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
+//const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
 const url =  'https://api.themoviedb.org/3/';
 const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US`);
  const data = await request.json();
@@ -533,7 +538,7 @@ return data
  }
 
  async function getLatestMovies02 (endpoint) {
-    const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
+   // const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
     const url =  'https://api.themoviedb.org/3/';
     const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US&page=2`);
      const data = await request.json();
@@ -541,7 +546,7 @@ return data
      }
 
      async function getLatestMovies03 (endpoint) {
-        const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
+      //  const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
         const url =  'https://api.themoviedb.org/3/';
         const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US&page=3`);
          const data = await request.json();
@@ -556,7 +561,7 @@ const urlParams = new URLSearchParams(queryString);
 const typeOfMedia = urlParams.get('type');
 const nameOfSearch = urlParams.get('search-term');
 
-    const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
+   // const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
     const url =  'https://api.themoviedb.org/3/';
 
 
