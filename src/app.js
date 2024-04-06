@@ -7,12 +7,7 @@ import './css/swiper.css';
 import { initSwiper01, initSwiper02 } from './swiper.js';
 import { startAnimation } from './indexAnimation.js';
 
-/*import backgroundImage from './css/images/back.jpg';
-
-const element = document.createElement('div');
-element.style.backgroundImage = `url(${backgroundImage})`;*/
-
-
+const API_URL = 'https://lixxyapp.netlify.app/api/data';
 
 const page = { currPage: window.location.pathname }
 
@@ -380,7 +375,7 @@ function createDetailPage () {
 
 
     let movieDetailCard = document.querySelector('#detail_section');
-    let url = 'https://image.tmdb.org/t/p/original';
+    let url = `${API_URL}/t/p/original`;
 
     let div = document.createElement('div');
     div.setAttribute('id', 'picture_wrapper');
@@ -456,7 +451,7 @@ function createDetailPageTv () {
    
       let TvDetailCard = document.querySelector('#detail_section');
     
-      let url = 'https://image.tmdb.org/t/p/original';
+      let url = `${API_URL}/t/p/original`;
      
       let div = document.createElement('div');
       div.setAttribute('id', 'picture_wrapper');
@@ -523,18 +518,35 @@ function createDetailPageTv () {
 
 
 //Fetch data TMDB API
+// Function to fetch data from Express server
+async function fetchData(endpoint) {
+    try {
+      const response = await fetch(`${API_URL}${endpoint}`);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      throw new Error('Failed to fetch data');
+    }
+  }
+  
 
 async function getLatestMovies (endpoint) {
-const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-const url =  'https://api.themoviedb.org/3/';
-const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US`);
- const data = await request.json();
-return data
- }
+    try {
+        const movies = await fetchData(endpoint);
+        const data = await movies.json();
+       return data
+        // Process movies data...
+      } catch (error) {
+        console.error('Failed to get popular movies:', error);
+      }
+    }
+    
+ 
 
  async function getLatestMovies02 (endpoint) {
     const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-    const url =  'https://api.themoviedb.org/3/';
+    const url = API_URL            //'https://api.themoviedb.org/3/';
     const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US&page=2`);
      const data = await request.json();
     return data
@@ -542,7 +554,7 @@ return data
 
      async function getLatestMovies03 (endpoint) {
         const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-        const url =  'https://api.themoviedb.org/3/';
+        const url =  API_URL               //'https://api.themoviedb.org/3/';
         const request = await fetch( `${url}${endpoint}?api_key=${api_Key}&language=en-US&page=3`);
          const data = await request.json();
         return data
@@ -557,7 +569,7 @@ const typeOfMedia = urlParams.get('type');
 const nameOfSearch = urlParams.get('search-term');
 
     const api_Key = 'afbf7cca056ce2daed661a5d429faeeb';
-    const url =  'https://api.themoviedb.org/3/';
+    const url = API_URL            //  'https://api.themoviedb.org/3/';
 
 
     const totalPages = 5; // You can set the maximum number of pages you want to fetch
@@ -668,7 +680,7 @@ function displaySearchResults (results) {
     const swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
   
     finalResults.forEach((movie) => {
-      let url = 'https://image.tmdb.org/t/p/w500';
+      let url = `${API_URL}/t/p/w500`;
       let div = document.createElement('div');
       div.classList.add('swiper-slide');
       div.classList.add('card');
@@ -702,7 +714,7 @@ function displaySearchResultstv (results) {
     const swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
   
     finalResults.forEach((serie) => {
-      let url = 'https://image.tmdb.org/t/p/w500';
+      let url = `${API_URL}/t/p/w500`;
       let div = document.createElement('div');
       div.classList.add('swiper-slide');
       div.setAttribute('serie-id', `${serie.id}`);
