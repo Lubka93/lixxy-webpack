@@ -1,3 +1,5 @@
-[build]
-
-functions = "/functions";
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/myFunction"   
+  status = 200
+  headers = {Access-Control-Allow-Origin = "*", Access-Control-Allow-Headers = "*"}
