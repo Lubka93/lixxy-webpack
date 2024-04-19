@@ -85,7 +85,7 @@ if (page.currPage === '/main.html' || page.currPage === '/movieDetails.html' || 
     height = totalAvailableHeight / (numRows * 3);
 } else if (page.currPage === '/searchPage.html') {
     // Adjust the height calculation based on the number of results
-    if (swiperSlides.length <= 10) {
+    if (swiperSlides.length <= 15) {
         height = totalAvailableHeight / (numRows * 20);
     } else if (swiperSlides.length <= 20) {
         height = totalAvailableHeight / (numRows * 7);
