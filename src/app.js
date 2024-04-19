@@ -2,7 +2,8 @@ import  './css/style.css';
 import './css/spinner.css';
 import './css/alert.css';
 import './css/swiper.css';
-
+//import banner from 'C:/Users/lubic/Desktop/WebPackLixxy/src/css/images/739722.jpg'
+import banner from './images/No_image_available.svg.png';
 
 import { initSwiper01, initSwiper02 } from './swiper.js';
 import { startAnimation } from './indexAnimation.js';
@@ -21,43 +22,49 @@ let swiper02 = document.querySelector('#swiper02');
 
 
 
-//change of color movie vs tv series
-
-function changeOfLinkColor () {
+function changeOfLinkColor() {
+    // Get all links with class 'main_category_switch'
     let links = document.querySelectorAll('.main_category_switch');
+
+    // Get the type of media from the URL query parameters
     const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const typeOfMedia = urlParams.get('type');
+    const urlParams = new URLSearchParams(queryString);
+    const typeOfMedia = urlParams.get('type');
+
+    // Get the current page filename (e.g., 'main.html', 'tvShows.html')
+    const currentPage = window.location.pathname.split('/').pop(); // Get the last part of the pathname
+
+    // Loop through each link element
     links.forEach((link) => {
-     if (link.getAttribute('href') === page.currPage.slice(1) )
-    {link.style.color = '#f2ff42b6';
-    link.style.fontSize  = '1.9vw'; }
-    else if (link.getAttribute('group') === page.currPage.slice(1))
-    {link.style.color = '#f2ff42b6';
-    link.style.fontSize  = '1.9vw'; }
-    else if (link.getAttribute('group') === page.currPage.slice(1)) 
-    {link.style.color = '#f2ff42b6';
-    link.style.fontSize  = '1.9vw';}
-    else if (typeOfMedia === 'movie' && link.getAttribute('group') === 'movieDetails.html')
-    {link.style.color = '#f2ff42b6';
-    link.style.fontSize  = '1.9vw';
-    
-    }
-    else if (typeOfMedia === 'tv-shows' &&  link.getAttribute('group') === 'TVshowsDetails.html')
-    {link.style.color = '#f2ff42b6';
-    link.style.fontSize  = '1.9vw';
-   
+        const group = link.getAttribute('group');
+
+        // Check conditions to determine styling based on the current page and media type
+        if (group === currentPage) {
+            // Apply styles if the link's group matches the current page
+            applyLinkStyles(link);
+        } else if (typeOfMedia === 'movies' && group === 'movieDetails.html') {
+            // Apply styles for movie details when media type is 'movies'
+            applyLinkStyles(link);
+        } else if (typeOfMedia === 'series' && group === 'TVshowsDetails.html') {
+            // Apply styles for TV show details when media type is 'series'
+            applyLinkStyles(link);
+        }
+    });
 }
-    } 
-    )
+
+// Helper function to apply link styles 
+function applyLinkStyles(link) {
+    link.style.color = '#f2ff42b6';
+    link.style.fontSize = '1.9vw';
 }
 
 
-/*function backImg() {
+
+function backImg() {
     const movieDetailInfo = localStorage.getItem('selectedMovie');
     const movieDetailInfoObject = JSON.parse(movieDetailInfo);
 
-    let url = './css/images/back.jpg';
+    let url = './images/back.jpg';
     let backdropPath = movieDetailInfoObject.backdrop_path;
     let backdropPathUrl = `${url}${backdropPath}`;
     let body = document.querySelector('body');
@@ -94,7 +101,7 @@ const typeOfMedia = urlParams.get('type');
 
     // Append the style element to the document head
     document.head.appendChild(style);
-}*/
+}
 
 function detailBackdropImg() {
     const movieDetailInfo = localStorage.getItem('selectedMovie');
@@ -202,10 +209,11 @@ async function showPopularMovies() {
       let div = document.createElement('div');
       div.classList.add('swiper-slide');
       div.setAttribute('movie-id', `${movie.id}`);
-      div.innerHTML = `<img class="swiper-slide02" 
-          ${movie.poster_path
-          ? `src="${url + movie.poster_path}" alt="${movie.title}"> `
-          : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg" alt="${movie.title}"> `}
+      div.innerHTML =  
+       `<img class="swiper-slide02" 
+       src="${movie.poster_path ? url + movie.poster_path : banner}" 
+    alt="${movie.title}">
+
           <h2>${movie.title}</h2>
           <p>${movie.release_date}</p>`;
   
@@ -236,7 +244,7 @@ div.setAttribute('movie-id', `${movie.id}`);
 div.innerHTML =`<img class="img_upper_swiper" 
 ${movie.poster_path
   ? `src="${url + movie.poster_path}" alt="${movie.original_title}"> `
-  : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg" alt="${movie.original_title}"> `}
+  : `src="${banner}" alt="${movie.original_title}"> `}
   <p class = "slideBasicInfo">  <i id="star_icon" class="fa-solid fa-star fa-xs"><span id="star_text"> ${movie.vote_average.toFixed(1)} /10 </span></i> ${movie.original_title} </p>`;;
 
     swiperWrapper01.appendChild(div);
@@ -270,7 +278,7 @@ div.setAttribute('serie-id', `${serie.id}`);
 div.innerHTML =`<img class="swiper-slide02" 
         ${serie.poster_path 
         ? `src="${url+serie.poster_path}" alt="${serie.name}"> `
-        : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg" alt="${serie.name}"> `}
+        : `src="${banner}" alt="${serie.name}"> `}
         <h2>${serie.name}</h2>
 <p>${serie.first_air_date}</p>`;
 div.addEventListener('click', showTvShowDetail);
@@ -296,7 +304,7 @@ div.setAttribute('serie-id', `${serie.id}`);
 div.innerHTML =`<img class="img_upper_swiper" 
 ${serie.poster_path
   ? `src= "${url + serie.poster_path}" alt="${serie.original_name}"> `
-  : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg" alt="${serie.original_name}">`}
+  : `src="${banner}" alt="${serie.original_name}">`}
   <p class = "slideBasicInfo">  <i id="star_icon" class="fa-solid fa-star fa-xs"><span id="star_text"> ${serie.vote_average.toFixed(1)} /10 </span></i> ${serie.original_name} </p>`;
 
 
@@ -388,7 +396,7 @@ function createDetailPage () {
  
     div.innerHTML = `<img id="img_detail" ${movieDetailInfoObject.poster_path 
         ? `src="${url+movieDetailInfoObject.poster_path}" alt="${movieDetailInfoObject.title}">`
-        : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg alt="movie">`}
+        : `src="${banner}" alt="movie">`}
         <div id="text_wrapper">
         <h1>${movieDetailInfoObject.title}</h1>
         
@@ -463,7 +471,7 @@ function createDetailPageTv () {
       div.setAttribute('id', 'picture_wrapper');
       div.innerHTML = `<img id="img_detail" ${TvDetailInfoObject.poster_path 
           ? `src="${url+TvDetailInfoObject.poster_path}" alt="${TvDetailInfoObject.original_name}">`
-          : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg alt="movie">`}
+          : `src="${banner}" alt="movie">`}
           <div id="text_wrapper">
           <h1>${TvDetailInfoObject.original_name}</h1>
           
@@ -636,20 +644,26 @@ async function search() {
         if (results.length === 0 ) {
             showAlert('No results found!');
         }
-        else if (typeOfMedia === 'movie') {
+        else if (typeOfMedia === 'movie' ) {
             displaySearchResults(results);
            
             inputField.value = '';
-           
+            
             // Additional code for displaying results can be added here
         }
-        else if (typeOfMedia === 'tv') { displaySearchResultstv (results);
+        else if (typeOfMedia === 'tv' ) { displaySearchResultstv (results);
              
             inputField.value = '';
+           
         }
-    } else {
+       
+    } 
+    else if (typeOfMedia === 'movie'  && inputField.value === '') {
         showAlert('Write your search title, please, and check the movie or TV section!');
-    };
+    }
+    else if (typeOfMedia === 'tv' && inputField.value === '') {
+        showAlert('Write your search title, please, and check the movie or TV section!');
+    }
     hideSpinner();
   
 
@@ -664,6 +678,7 @@ function displaySearchResults (results) {
 
     showSpinner();
     
+    
     const finalResults = results;
    
     const swiperWrapper02 = document.querySelector('#swiper02 .swiper-wrapper');
@@ -677,7 +692,7 @@ function displaySearchResults (results) {
       div.innerHTML = `<img class="swiper-slide02" 
           ${movie.poster_path
           ? `src="${url + movie.poster_path}" alt="${movie.title}"> `
-          : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg" alt="${movie.title}"> `}
+          : `src="${banner}" alt="${movie.title}"> `}
           <h2>${movie.title}</h2>
           <p>${movie.release_date}</p>`;
   
@@ -710,7 +725,7 @@ function displaySearchResultstv (results) {
       div.innerHTML = `<img class="swiper-slide02" 
           ${serie.poster_path
           ? `src="${url + serie.poster_path}" alt="${serie.name}"> `
-          : `src="./css/images/movie-clapper-board-y2j7891v11vvki79.jpg" alt="${serie.name}"> `}
+          : `src="${banner}" alt="${serie.name}"> `}
           <h2>${serie.name}</h2>
           <p>${serie.first_air_date}</p>`;
   
@@ -737,16 +752,16 @@ function init () {
         
             showTopMovies();
             showPopularMovies ();
-          //  search();
-          //  backImg();
-          changeOfLinkColor ();
+            search();
+          
+        
             break;
         case '/tvShows.html':
             showTopTvSeries();
             showPopularTvSeries ();
-           // search();
-           // backImg()
-           changeOfLinkColor ();
+            search();
+          
+        
             
                     console.log('TV shows page');
                     

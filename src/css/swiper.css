@@ -203,12 +203,19 @@
      }
     
     #best_movies_section {
-    width: 300px;
+    
+    width: fit-content;
+  object-fit: contain;
     display: flex;
     text-align: center;
     margin: 0 auto;
     height: 650px;
     
+    }
+
+    #best_movies_section img {
+      
+      object-fit: contain;
     }
     
     #swiper02 {

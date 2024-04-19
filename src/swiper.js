@@ -80,19 +80,26 @@ const numRows = Math.ceil(swiperSlides.length / maxCardsPerSlide);
 const totalAvailableHeight = 40000; // Adjust this value based on your design
 
 let height;
-
+let searchHeading= document.querySelector('#search_reasult_heading');
 if (page.currPage === '/main.html' || page.currPage === '/movieDetails.html' || page.currPage === '/tvShows.html' || page.currPage === '/TVshowsDetails.html') {
-    height = totalAvailableHeight / (numRows * 3);
+    height = totalAvailableHeight / (numRows * parseInt(searchHeading));
 } else if (page.currPage === '/searchPage.html') {
     // Adjust the height calculation based on the number of results
-    if (swiperSlides.length <= 15) {
-        height = totalAvailableHeight / (numRows * 20);
-    } else if (swiperSlides.length <= 20) {
-        height = totalAvailableHeight / (numRows * 7);
-    } else if (swiperSlides.length <= 50) {
+
+      if (swiperSlides.length < 5 ) {
+      height = totalAvailableHeight / (numRows * 20);
+  }
+   else  if (swiperSlides.length >= 6 && swiperSlides.length < 11) {
+      height = totalAvailableHeight / (numRows * 25);
+  }
+    else if (swiperSlides.length >= 12 && swiperSlides.length < 19) {
+        height = totalAvailableHeight / (numRows * 10);
+    } else if (swiperSlides.length >= 20 && swiperSlides.length <= 19) {
         height = totalAvailableHeight / (numRows * 5);
+    } else if (swiperSlides.length >= 50) {
+        height = totalAvailableHeight / (numRows * 1.7);
     }
-    // Add more conditions as needed
+
 }
 
 swiperWrapper02.style.height = `${height}px`;

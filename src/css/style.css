@@ -499,7 +499,7 @@
  
     
     #picture_wrapper img {
-        width: 150px;
+        width: fit-content;
         height: fit-content;
         margin-right: 10px;
         padding-top: 125px;
@@ -1276,20 +1276,22 @@
     position: relative;
       color: aliceblue; 
       font-family: 'Bebas Neue', sans-serif, Arial, Helvetica, sans-serif;
-      font-size: 2.9vw;
+      transition: 0.8s;
       text-decoration: none;
       opacity: 0.6;
       padding-right: 5vw;
      z-index: 1;
     cursor: pointer;
+     /* HOVER OFF */
+   font-size: 1.5vw;
 
  }
 
  #index  .main_category_switch_index:hover { 
     text-decoration: none;
         opacity: 1;
-        transition: 0.7s;
-        font-size: 3.0vw;
+        transition: 0.8s;
+         font-size: 3.0vw;
 }
 
 #amazing {
