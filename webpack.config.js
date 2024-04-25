@@ -23,8 +23,8 @@ module.exports = {
             loader: "url-loader",
             options: {
               limit: 8192,
-              mimetype: "image/jpg",
-              encoding: true,
+            //  mimetype: "image/jpg",
+            //  encoding: true,
             },
           },
         ],
